@@ -1,6 +1,6 @@
 <h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_with model: @user, url: user_registration_path, method: :POST, local: true do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="field">
@@ -35,6 +35,15 @@
   <div class="field">
     <%= f.label :age %><br />
     <%= f.text_field :age, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender %>
+    <% ["man", "woman"].each do |gender| %>
+      <%= f.check_box :gender, {multiple: true}, gender, nil %>
+      <%= gender %>
+    <% end %>
+    <span>※どちらか正しく選ぶ必要があります</span>
   </div>
 
   <div class="actions">
