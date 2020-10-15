@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 2020_10_15_015030) do
     t.string "gender", null: false
     t.string "age", null: false
     t.date "birth_date", null: false
-    t.integer "area_id", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
