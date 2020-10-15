@@ -48,7 +48,6 @@
 
 | Column    | Type       | Options                        |
 | --------- | ---------- | ------------------------------ |
-| icon      | string     | null: false                    |
 | profile   | text       | null: false                    |
 | list      | references | null: false, foreign_key: true |
 
@@ -56,6 +55,7 @@
 
 - belongs_to : users
 - has_one :lists
+- has_one_attached :image
 
 ## lists テーブル
 
