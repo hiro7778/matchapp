@@ -4,12 +4,24 @@
     <title>Matchapp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header>
+      <div>
+        <h1><a href="/">Match</a></h1>
+        <% if user_signed_in? %>
+          <%= link_to current_user.nickname, "/users/#{current_user.id}", class: "user-nickname" %>
+          <%= link_to 'Sign_out', destroy_user_session_path, method: :delete %>
+        <% else %>
+         <%= link_to 'Sign_up', new_user_registration_path %>
+         <%= link_to 'Log_in', new_user_session_path %>
+        <% end %>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>

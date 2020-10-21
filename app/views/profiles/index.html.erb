@@ -1,8 +1,4 @@
 <h1>MATCH</h1>
-<% if user_signed_in? %>
-  <%= "#{current_user.nickname}さんはログインしています"%>
-  <%= link_to 'Log_out', destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to 'Sign_up', new_user_registration_path %>
-  <%= link_to 'Log_in', new_user_session_path %>
-<% end %>
+
+
+
