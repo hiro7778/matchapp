@@ -43,8 +43,17 @@
   align-items: center;
 }
 
+.user-nickname {
+  text-decoration: none;
+  color: #333333;
+  padding-right: 20px;
+}
+
 .sign-out {
   text-decoration: none;
+  color: #333333;
+  padding-right: 15px;
+  margin-right: 15px;
 }
 
 .sign-up {
