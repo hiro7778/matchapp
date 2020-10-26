@@ -1,6 +1,10 @@
-<h2>Sign up</h2>
+<div class='form-header'>
+  <h1 class='form-header-text'>
+    Create Account
+  </h1>
+</div>
 
-<%= form_with model: @user, url: user_registration_path, method: :POST, local: true do |f| %>
+<%= form_with model: @user, url: user_registration_path, method: :POST, class: 'registration-main', local: true do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="field">
@@ -43,7 +47,6 @@
       <%= f.check_box :gender, {multiple: true}, gender, nil %>
       <%= gender %>
     <% end %>
-    <span>※どちらか正しく選ぶ必要があります</span>
   </div>
 
   <div class="actions">
