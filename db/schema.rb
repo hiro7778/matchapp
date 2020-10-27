@@ -34,7 +34,12 @@ ActiveRecord::Schema.define(version: 2020_10_15_103441) do
   end
 
   create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "profile", null: false
+    t.text "meet", null: false
+    t.text "place"
+    t.integer "area_id", null: false
+    t.date "date", null: false
+    t.integer "count", null: false
+    t.text "language", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
